@@ -2,16 +2,20 @@
 CP1404/CP5632 - Practical
 Broken program to determine score status
 """
+def main():
+    '''This function asks a score and return the grade'''
+    score = float(input("Enter score: "))
+    print(evaluate_grade(score))
 
-
-
-score = float(input("Enter score: "))
-if score < 0 or score > 100:
-    print("Invalid score")
-else:
-    if score < 50:
-        print("Bad")
+def evaluate_grade(score):
+    if score < 0 or score > 100:
+        return "Invalid Score"
+    elif score < 50:
+        return "Bad"
     elif score >= 50 and score < 90:
-        print("Passable")
+        return "Passable"
     elif score >= 90:
-        print("Excellent")
+        return "Excellent"
+
+
+main()
