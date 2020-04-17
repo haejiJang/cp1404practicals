@@ -1,4 +1,5 @@
 def basic_list_operations():
+    '''This function shows basic list operation'''
     numbers = []
     for i in range (5):
         number = int(input("Number: "))
@@ -12,6 +13,7 @@ def basic_list_operations():
 basic_list_operations()
 
 def woefully_inadequate_security_checker():
+    '''This function evaluates username's accessibility'''
     usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
                  'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
                  'bob']
