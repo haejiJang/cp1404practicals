@@ -8,7 +8,7 @@ def basic_list_operations():
     print("The smallest number is ", min(numbers))
     print("The largest number is ", max(numbers))
     print("The average of the numbers is ", sum(numbers)/len(numbers))
-    
+
 basic_list_operations()
 
 def woefully_inadequate_security_checker():
