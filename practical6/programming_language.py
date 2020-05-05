@@ -1,4 +1,4 @@
-class PromgrammingLanguage:
+class ProgrammingLanguage:
     """Represent information on programming language"""
     def __init__(self, name, typing, reflection, year):
         """Construct a ProgrammingLanguage from the given values"""
@@ -9,5 +9,26 @@ class PromgrammingLanguage:
 
     def is_dynamic(self):
         """Determine if language is dynamically typed."""
+        return self.typing == "Dynamic"
+
+    def __str__(self):
+        """Return string of language object"""
+        return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.name, self.typing, self.reflection, self.year)
+
+def test():
+    """Run test"""
+    ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
+    python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
+    visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
+
+    languages = [ruby, python, visual_basic]
+    print(python)
+
+    print("The dynamically typed languages are: ")
+    for language in languages:
+        if language.is_dynamic():
+            print(language.name)
 
 
+if __name__ == "__main__":
+    test()
