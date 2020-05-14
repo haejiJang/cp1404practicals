@@ -13,18 +13,22 @@ __author__ = 'Lindsay Ward'
 
 
 class SquareNumberApp(App):
-    """ SquareNumberApp is a Kivy App for squaring a number """
+    """Kivy App for squaring a number."""
+
     def build(self):
-        """ build the Kivy app from the kv file """
+        """Kivy app based on the kv"""
         Window.size = (200, 100)
         self.title = "Square Number"
         self.root = Builder.load_file('squaring.kv')
         return self.root
 
     def handle_calculate(self, value):
-        """ handle calculation (could be button press or other call), output result to label widget """
-        result = value ** 2
-        self.root.ids.output_label.text = str(result)
+        """Handle calculation in label widget"""
+        try:
+            result = int(value) ** 2
+            self.root.ids.output_label.text = str(result)
+        except ValueError:
+            self.root.ids.output_label.text = ""
 
 
 SquareNumberApp().run()
