@@ -19,4 +19,3 @@ class SilverServiceTaxi(Taxi):
         """Return a string representation of a SilverServiceTaxi."""
         return "{} plus flagfall of ${:.2f}".format(super().__str__(),
                                                     self.flagfall)
-    
